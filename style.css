@@ -1,0 +1,333 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/* variables et classes generiques */
+
+:root {
+    --colorWhite: white
+}
+
+
+.space {
+    justify-content: start;
+}
+
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+
+.navigation {
+    font-weight: bold;
+    color: rgb(10, 10, 78);
+    font-size: 20px;
+    padding-left: 10px
+}
+
+/* xlasses actives */
+
+.active {
+    left: 0
+}
+
+/*  */
+
+.header {
+
+    height: 100vh;
+    width: 100%;
+    background-image: url(/images/neom-lh1uDwaUPPM-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.navbar {
+    background-color: var(--colorWhite);
+    height: 100px;
+    width: 100%;
+    opacity: 0.8;
+    justify-content: space-between;
+}
+
+.burger:after {
+    content: '\2630';
+    padding: 10px 0 0 10px;
+
+}
+
+.burger {
+
+    padding: 10px 0 0 10px;
+    font-weight: bold;
+    font-size: 35px;
+
+}
+
+
+.logoBurger.navigation {
+    font-weight: bold;
+    color: rgb(10, 10, 78)
+}
+
+.logoParent {
+
+    flex-direction: column;
+
+}
+
+#logo {
+    color: #000;
+    font-weight: bold;
+}
+
+span.toucan {
+    margin: 0;
+    font-size: 28px;
+    color: #e25e2a
+}
+
+.texte {
+
+    text-align: center;
+    margin: 70px 50px;
+    font-weight: 200;
+    font-size: 25px;
+    position: relative;
+    left: -100%;
+    color: black;
+    transition: 1s ease-out
+}
+
+.searchBar {
+    flex-direction: column;
+}
+
+
+.iconsSearch {
+    font-size: 35px;
+    border: none;
+    position: relative;
+    right: 30px;
+    top: 10.1px;
+    color: var(--colorWhite);
+    background: black;
+    width: 30px;
+    height: 5px;
+    padding-bottom: 45px;
+    border-radius: 0 10px 10px 0
+}
+
+
+.inputCounter {
+    padding: 12px 12px;
+    margin: 0 10px;
+    border: 1px solid;
+    background-color: black;
+    color: var(--colorWhite);
+    font-size: 1.2rem;
+    border-radius: 50px
+}
+
+.error {
+    margin-top: 10px
+}
+
+
+#inputText {
+    width: 340px;
+    height: 46px;
+    outline: none;
+    border-radius: 8px;
+    background: #c7bebe;
+    border: transparent;
+}
+
+input[type=text] {
+    font-size: 15px;
+    text-align: center
+}
+
+.produitsdiv {
+    margin: 70px 30px;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 16px 16px 17px var(--colorWhite);
+}
+
+
+.produitImage {
+    transition: 1s all ease-out;
+}
+
+p,
+h4 {
+
+    margin: 28px;
+    text-align: justify;
+    font-weight: light
+}
+
+.parentLoader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: grey;
+    z-index: 20;
+    display: none;
+    /* a reactiver le display none avec le js */
+    flex-direction: column;
+}
+
+
+.loaderText {
+    color: var(--colorWhite);
+    margin-bottom: 30px;
+    font-size: 1.5rem
+}
+
+.parentLoader .loader {
+    height: 80px;
+    width: 80px;
+    border: solid 5px var(--colorWhite);
+    border-color: white transparent white transparent;
+    border-radius: 50px;
+    animation: spinner 1s infinite ease-in-out;
+}
+
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/* style de la navbar */
+
+
+.containerLogoBurger {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px
+}
+
+.btnRmvBurg {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+ul {
+    background: white;
+    height: 100%;
+    width: 60%;
+    position: fixed;
+    z-index: 20;
+    margin-left: -100%;
+    transition: all 0.5s ease-in-out;
+
+
+}
+
+ul li {
+    list-style: none;
+    margin: 40px;
+
+}
+
+span {
+
+    margin-left: 170px;
+    font-size: 20px
+}
+
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    margin-left: 15px;
+    transition: all 0.3s ease-out;
+
+}
+
+ul li a:hover {
+    background-color: black;
+    padding: 5px;
+    color: white;
+
+}
+
+
+/* .imageCollab {
+    margin: 20px;
+    height: 50px;
+    width: 220px;
+    object-fit: cover;
+} */
+
+
+.fa-house {
+    position: relative;
+    left: 100px
+}
+
+.fa-message {
+    position: relative;
+    left: 50px
+}
+
+.fa-address-card {
+    position: relative;
+    left: 90px
+}
+
+
+/* partie footer */
+
+
+.footer {
+    background-color: #1a1818;
+    height: auto;
+    margin-top: 50px
+}
+
+
+.iconsReseaux i {
+    font-size: 35px;
+    margin: 30px;
+    padding: 10px;
+    color: var(--colorWhite);
+    border: 0.5px var(--colorWhite) solid;
+    border-radius: 50px;
+    text-align: center;
+}
+
+
+.footer .textFooter {
+    color: var(--colorWhite);
+    padding: 20px;
+    text-align: center;
+}
