@@ -6,7 +6,6 @@ const text = document.querySelector(".texte")
 const parentLoader = document.querySelector(".parentLoader")
 
 // const fieldinput = document.querySelector("input[type=text]")
-
 // gestion d'erreur de l'input/validation client
 
 const validate = (e) => {
@@ -76,7 +75,6 @@ window.addEventListener("scroll", displayText)
 
 //consommation de l'API
 
-
 //recuperation des elements du DOM
 const infoPackaging = document.querySelector(".infoPackaging")
 const marqueProduits = document.querySelector(".marqProduit")
@@ -85,7 +83,6 @@ const categorie = document.querySelector(".CatProduit")
 const packaging = document.querySelector(".infoPackaging")
 const countries = document.querySelector(".countries")
 const image = document.querySelector(".produit")
-
 
 
 const callAPI = () => {
@@ -150,6 +147,41 @@ removeBurger.addEventListener("click", (e) => {
 
 
 })
+
+
+// mise en place du mode dark
+
+const btnmode = document.querySelector(".btnmode");
+const containermode = document.querySelector(".containermode");
+const body = document.querySelector("body");
+const btnRmvBurg = document.querySelector(".btnRmvBurg")
+const listUl = document.querySelector(".list");
+const burger = document.querySelector(".burger");
+textScroll = document.querySelector(".texte");
+const navbar = document.querySelector(".navbar");
+const link = document.querySelectorAll("a")
+
+btnmode.addEventListener("click", () => {
+    body.classList.toggle("activedarkmode")
+    body.classList.toggle("activeColorfont")
+    btnmode.classList.toggle("btnPosition")
+    listUl.classList.toggle("activedarkmode")
+    // burger.classList.toggle("activeColorfont")
+    text.classList.toggle("activeColorfont")
+    navbar.classList.toggle("backgroundDark")
+    containermode.classList.toggle("backgroundWhite")
+
+
+
+    for (let i = 0; i < link.length; i++) {
+        link[i].classList.toggle("activeColorfont")
+    }
+
+})
+
+
+
+
 
 
 

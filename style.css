@@ -80,7 +80,6 @@
 
 }
 
-
 .logoBurger.navigation {
     font-weight: bold;
     color: rgb(10, 10, 78)
@@ -121,15 +120,15 @@ span.toucan {
 
 
 .iconsSearch {
-    font-size: 35px;
+    font-size: 36px;
     border: none;
     position: relative;
     right: 30px;
-    top: 10.1px;
+    top: 11px;
     color: var(--colorWhite);
     background: black;
     width: 30px;
-    height: 5px;
+    height: 0px;
     padding-bottom: 45px;
     border-radius: 0 10px 10px 0
 }
@@ -168,7 +167,7 @@ input[type=text] {
     margin: 70px 30px;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 16px 16px 17px var(--colorWhite);
+
 }
 
 
@@ -240,7 +239,7 @@ h4 {
 
 
 ul {
-    background: white;
+    background: #fff;
     height: 100%;
     width: 60%;
     position: fixed;
@@ -276,8 +275,7 @@ ul li a {
 ul li a:hover {
     background-color: black;
     padding: 5px;
-    color: white;
-
+    color: var(--colorWhite)
 }
 
 
@@ -330,4 +328,50 @@ ul li a:hover {
     color: var(--colorWhite);
     padding: 20px;
     text-align: center;
+}
+
+
+/* mise en place style pour button dark mode */
+
+.containermode {
+    margin: 20px;
+    background-color: grey;
+    height: 30px;
+    width: 60px;
+    border-radius: 50px
+}
+
+.btnmode {
+    background: black;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    transition: 0.5s all ease-out;
+}
+
+.activedarkmode {
+    background-color: rgb(49, 46, 46);
+
+}
+
+.activeColorfont {
+    color: var(--colorWhite)
+}
+
+.btnPosition {
+    transform: translateX(30px)
+}
+
+.activeDark {
+    color: black;
+}
+
+.backgroundDark {
+    background-color: rgb(49, 46, 46);
+    opacity: 1
+}
+
+.backgroundWhite {
+    background-color: #fff;
+
 }
